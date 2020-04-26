@@ -1,0 +1,50 @@
+table {
+	font-weight: solid bold;
+	
+}
+	
+th {
+	background-color: #EEF4F3;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+}
+
+tr {
+	background-color: #EEF4F3;
+	height: 50px;
+	font-size: 15px;
+	text-align: center;
+}
+
+body {
+	background-color: #1DAA8D;
+}
+
+h1 {
+	
+	font-size: 50px;
+	font-family: monospace;
+	color: #FBB117;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: monospace;
+	color: #ffffff;
+}
+
+input {
+	width: 300px;
+	height: 30px;
+	font-family: monospace;
+	font-size: 15px;
+	color: black;
+	text-align: center;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+
+td.error {
+	background-color: #333;
+}
