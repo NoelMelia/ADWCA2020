@@ -34,10 +34,12 @@
 		</table>
 	</c:forEach>
 	<br>
-	<a href="/">Home</a>
-	<a href="/addOrder.html">Add Order</a>
-	<a href="/showProducts.html">List Products</a>
-	<a href="/showCustomers.html">List Customers</a>
-	<a href="/logout">Logout</a>
+	<table>
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/addOrder.html">Add Order</a></td>
+		<td><a href="/showProducts.html">List Products</a></td>
+		<td><a href="/showCustomers.html">List Customers</a></td>
+		<td><a href="/logout">Logout</a></td>
+	</table>
 </body>
 </html>

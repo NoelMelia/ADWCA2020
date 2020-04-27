@@ -17,18 +17,18 @@
 			<tr>
 				<td>Customer:</td>
 				<td><form:select path="cust.cName">
-						<form:option value="NONE" label="--- Select ---" />
+						
 						<form:options items="${custNames}" />
 					</form:select></td>
 				<td><form:errors path="cust.cName" cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>Product:</td>
-				<td><form:select path="prod.pDesc" >
-						<form:option value="NONE" label="--- Select ---" />
+				<td><form:select path="prod.pDesc">
+						
 						<form:options items="${prodNames}" />
 					</form:select></td>
-				<td><form:errors path="prod.pDesc"  cssClass="error" /></td>
+				<td><form:errors path="prod.pDesc" cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>Quantity:</td>
@@ -36,15 +36,20 @@
 				<td><form:errors path="qty"></form:errors></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Order" /></td>
+				<td colspan="2"><input type="submit" value="Order" /></td>
 			</tr>
 
 		</table>
 	</form:form>
 
 	<br>
-	<a href="/index.html">Home</a>
-	<a href="/showCustomers.html">List Customers</a>
-	<a href="/showProducts.html">List Products</a>
-</body>
+	<table>
+		
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/showCustomers.html">List Customers</a></td>
+		<td><a href="/showProducts.html">List Products</a></td>
+	
+	</table>
+	
+	</body>
 </html>

@@ -49,7 +49,7 @@ public class OrderController {
 		model.addAttribute("orders", orders);
 		return "showOrders";
 	}
-
+	
 	@RequestMapping(value = "/addOrder.html", method = RequestMethod.GET)
 	public String addOrdersGET(Model model) {
 		ArrayList<Customer> cust = cs.findAll();
@@ -76,7 +76,7 @@ public class OrderController {
 	}
 
 	@RequestMapping(value = "/addOrder.html", method = RequestMethod.POST)
-	public String addOrdersPOST(@Valid @ModelAttribute("orders") Order order, BindingResult br) {
+	public String addOrdersPOST(Model model,@Valid @ModelAttribute("orders") Order order, BindingResult br) {
 		if (!br.hasErrors()) {
 			Long piD = Long.parseLong(order.getProd().getpDesc());
 			Long ciD = Long.parseLong(order.getCust().getcName());
@@ -102,6 +102,28 @@ public class OrderController {
 			os.save(order);
 
 		} else {
+			ArrayList<Customer> cust = cs.findAll();
+			ArrayList<Product> prod = ps.findAll();
+
+			Map<Long, String> custNames = new LinkedHashMap<Long, String>();
+			for (Customer c : cust) {
+				custNames.put(c.getcId(), c.getcName());
+
+				model.addAttribute("custNames", custNames);
+			}
+
+			Map<Long, String> prodNames = new LinkedHashMap<Long, String>();
+			for (Product p : prod) {
+				prodNames.put(p.getpId(), p.getpDesc());
+
+				model.addAttribute("prodNames", prodNames);
+			}
+
+			
+
+			
+
+			
 			return "addOrder";
 		}
 		return "redirect:showOrders.html";

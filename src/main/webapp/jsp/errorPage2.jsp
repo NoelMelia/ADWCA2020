@@ -12,8 +12,9 @@
 	<h1>Error Creating the following Order</h1>
 	<br>
 	<tr>
-		
-			<h2>Error: Customer: ${orders.cust.cId} and/or Product: ${orders.prod.pId} doesnt exist</h2>
+
+		<h2>Error: Customer: ${orders.cust.cId} and/or Product:
+			${orders.prod.pId} doesnt exist</h2>
 	</tr>
 	<br>
 	<table>
@@ -27,12 +28,16 @@
 			<td>${orders.cust.cId}</td>
 			<td>${orders.qty}</td>
 		</tr>
-		
-		
+
+
 	</table>
 	<br>
-	<a href="/">Home</a>
-	<a href="/addOrder.html">New Orders</a>
-	<a href="/showOrders.html">List Orders</a>
+	<table>
+	<tr>
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/addOrder.html">New Orders</a></td>
+		<td><a href="/showOrders.html">List Orders</a></td>
+	</tr>
+	</table>
 </body>
 </html>

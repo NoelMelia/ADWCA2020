@@ -12,8 +12,8 @@
 	<h1>List of customers</h1>
 	<table>
 		<c:forEach items="${customers}" var="customers">
-			<h2>${customers.cId} ${customers.cName}</h2>
-			<h3>${customers.cName}'s Orders</h3>
+			<h2>${customers.cId}${customers.cName}</h2>
+			<h3>${customers.cName}'sOrders</h3>
 
 			<table>
 				<tr>
@@ -32,14 +32,16 @@
 				</c:forEach>
 
 			</table>
-			
+
 		</c:forEach>
 	</table>
-	<br> 
-	<a href="/">Home</a>
-	<a href="/addCustomer.html">Add Customer</a>
-	<a href="/showProducts.html">List Products</a>
-	<a href="/showOrders.html">List Orders</a>
-	<a href="/logout">Logout</a></td>
+	<br>
+	<table>
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/addCustomer.html">Add Customer</a></td>
+		<td><a href="/showProducts.html">List Products</a></td>
+		<td><a href="/showOrders.html">List Orders</a></td>
+		<td><a href="/logout">Logout</a></td>
+	</table>
 </body>
 </html>

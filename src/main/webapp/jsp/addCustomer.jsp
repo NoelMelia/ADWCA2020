@@ -14,19 +14,22 @@
 	<form:form modelAttribute="customers">
 		<table>
 			<tr>
-				<td>Cust Name:</td>
+				<td>Customer Name:</td>
 				<td><form:input path="cName"></form:input></td>
 				<td><form:errors path="cName"></form:errors></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Add" /></td>
 			</tr>
-			
+
 		</table>
 	</form:form>
 	<br>
-	<a href="/index.html">Home</a>
-	<a href="/showOrders.html">List Orders</a>
-	<a href="/showProducts.html">List Products</a>
+	<table>
+	<td><a href="/index.html">Home</a></td>
+	<td><a href="/showOrders.html">List Orders</a></td>
+	<td><a href="/showProducts.html">List Products</a></td>
+	</table>
+
 </body>
 </html>

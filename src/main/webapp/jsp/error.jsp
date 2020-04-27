@@ -12,14 +12,13 @@
 	<h1>Error Creating the following Order</h1>
 	<br>
 	<tr>
-		
-			<h2>Can't Create Order</h2>
+		<h2>Can't Create Order</h2>
 	</tr>
 	<br>
 	<table>
 		<tr>
 			<th>Product ID</th>
-			<th>Description</th>
+			<th>Customer ID</th>
 			<th>Quantity in Stock</th>
 		</tr>
 		<tr>
@@ -27,12 +26,17 @@
 			<td>${orders.cust.cId}</td>
 			<td>${orders.qty}</td>
 		</tr>
-		
-		
+
+
 	</table>
 	<br>
-	<a href="/">Home</a>
-	<a href="/addOrder.html">New Orders</a>
-	<a href="/showOrders.html">List Orders</a>
+	<table>
+	<tr>
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/addOrder.html">New Orders</a></td>
+		<td><a href="/showOrders.html">List Orders</a></td>
+		
+	</tr>
+	</table>
 </body>
 </html>

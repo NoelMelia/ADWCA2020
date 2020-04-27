@@ -17,7 +17,7 @@
 				<td>Product Description:</td>
 				<td><form:input path="pDesc"></form:input></td>
 				<td><form:errors path="pDesc"></form:errors></td>
-				
+
 			</tr>
 			<tr>
 				<td>Quantity in Stock:</td>
@@ -27,11 +27,14 @@
 			<tr>
 				<td colspan="2"><input type="submit" value="Add" /></td>
 			</tr>
-			
+
 		</table>
-		<a href="/index.html">Home</a>
-		<a href="/showOrders.html">List Orders</a>
-		<a href="/showProducts.html">List Products</a>
+
 	</form:form>
+	<table>
+		<td><a href="/index.html">Home</a></td>
+		<td><a href="/showOrders.html">List Orders</a></td>
+		<td><a href="/showProducts.html">List Products</a></td>
+	</table>
 </body>
 </html>
