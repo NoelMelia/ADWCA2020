@@ -13,6 +13,7 @@ public class CustomerService {
 	@Autowired
 	CustomerRepository cr;
 
+	//Same as the product service page
 	public ArrayList<Customer> findAll() {
 		return (ArrayList<Customer>) cr.findAll();
 	}

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.sales.models.Customer;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
 
@@ -25,6 +24,7 @@ public class ProductController {
 	@Autowired
 	ProductService ps;
 
+	//Similar to the Customer but its the Product Controller
 	@RequestMapping(value = "/showProducts.html")
 	public String showProducts(Model model) {
 		System.out.println("In Controller");
@@ -33,6 +33,7 @@ public class ProductController {
 		return "showProducts";
 	}
 
+	//Adding the product. Getting the details for the page
 	@RequestMapping(value = "/addProduct.html", method = RequestMethod.GET)
 	public String addProductGET(Model model) {
 		
@@ -48,6 +49,7 @@ public class ProductController {
 		return "addProduct";
 	}
 
+	//Checking to see if the page has no errors and then posting the new product 
 	@RequestMapping(value="/addProduct.html",method=RequestMethod.POST)
 	public String addCoursePOST(@Valid @ModelAttribute("product") Product p, BindingResult result) {
 		if(result.hasErrors())

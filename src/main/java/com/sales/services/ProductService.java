@@ -11,15 +11,16 @@ import com.sales.repositories.ProductRepository;
 public class ProductService {
 	@Autowired
 	ProductRepository pr;
-	
+	//Finding all the products
 	public ArrayList<Product> findAll() {
 		return (ArrayList<Product>) pr.findAll();
 	}
-	
+	//Saving the product
 	public void save(Product c) {
 		pr.save(c);
 		
 	}
+	//Finfing one product
 	public Product findOne(Long long1)
 	{	
 		Product p = pr.findOne(long1);

@@ -16,20 +16,13 @@ import com.sales.repositories.ProductRepository;
 public class OrderService {
 	@Autowired
 	OrderRepository or;
-	@Autowired
-	ProductRepository pr;
-	@Autowired
-	CustomerRepository cr;
-	private Product product;
-	private Customer customer;
-
+	//Finding all the deatils from repo
 	public ArrayList<Order> findAll() {
 		return (ArrayList<Order>) or.findAll();
 	}
-
+	//Saving the details from the repo
 	public void save(Order order) {
-
-		
 		or.save(order);
-	}// if else if
-}// save
+	}
+	
+}
